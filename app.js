@@ -19,8 +19,8 @@ searchBtn.addEventListener('click', async (event) => {
             
             const weatherData = await getWeatherData(city);
             displayWeatherInfo(weatherData);
-            await getCityImage(city);
-            await getCityInfo(city)
+            getCityImage(city);
+            getCityInfo(city)
 
 
         }
@@ -144,7 +144,6 @@ async function getCityImage(city){
     } 
     catch (error) {
         console.error(error);
-        placeholderP.textContent = `Could not fetch image for ${city}`
     }
 }
 
@@ -185,8 +184,8 @@ function displayError(message){
     errorDisplay.classList.add("errorDisplay");
 
     weatherCard.textContent = "";
-    weatherCard.style.display = "flex";
     weatherCard.appendChild(errorDisplay);
+
 }
 
 

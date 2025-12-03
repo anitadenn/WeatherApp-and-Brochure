@@ -171,7 +171,7 @@ async function getCityInfo(city){
     }
     catch(error){
         console.error(error)
-        displayFact.textContent = `Could not fetch info for ${city}, maybe because it's a country and i only used a city api lmao`
+        displayFact.textContent = `Could not fetch info for ${city}, either the network is bad or you searched a country`
     }
         
 
